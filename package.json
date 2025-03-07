@@ -6,16 +6,30 @@
   ],
   "scripts": {
     "cz": "git-cz",
-    "commitlint": "commitlint --from=HEAD~1 --to=HEAD --verbose"
+    "lint": "eslint packages/*/src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint packages/*/src --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write \"packages/**/*.{js,jsx,ts,tsx,json,css,scss}\""
   },
   "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
+    "@eslint/eslintrc": "^3.3.0",
+    "@eslint/js": "^9.21.0",
+    "@typescript-eslint/eslint-plugin": "^8.26.0",
+    "@typescript-eslint/parser": "^8.26.0",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-vue": "^10.0.0",
+    "globals": "^16.0.0",
     "husky": "^9.1.7",
-    "lerna": "^8.2.1"
+    "lerna": "^8.2.1",
+    "prettier": "^3.5.3",
+    "vue-eslint-parser": "^10.1.1"
   },
   "config": {
     "commitizen": {
